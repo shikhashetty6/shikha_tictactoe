@@ -1,22 +1,21 @@
-package ÇØ½Ã;
+package last.programmers.í•´ì‹œ;
+
 
 import java.util.Arrays;
 
-import ÇØ½Ã.¿ÏÁÖÇÏÁö¸øÇÑ¼±¼ö.Solution;
+public class ì „í™”ë²ˆí˜¸ëª©ë¡ {
 
-public class ÀüÈ­¹øÈ£¸ñ·Ï {
-
-	public ÀüÈ­¹øÈ£¸ñ·Ï() {
+	public ì „í™”ë²ˆí˜¸ëª©ë¡() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public static void main(String[] args) {
-		Solution solution = new Solution();
+		com.programmers.hash.ì „í™”ë²ˆí˜¸ëª©ë¡.Solution solution = new com.programmers.hash.ì „í™”ë²ˆí˜¸ëª©ë¡.Solution();
 		String[] phone_book= {"119", "97674223", "1195524421"};
 		System.out.println(solution.solution(phone_book));
 
 	}
-	
+
 //	public static class Solution {
 //	    public boolean solution(String[] phone_book) {
 //	        boolean answer = true; 
@@ -40,7 +39,7 @@ public class ÀüÈ­¹øÈ£¸ñ·Ï {
 //	        return answer;
 //	    }
 //	}
-	
+
 //	public static class Solution {
 //	    public boolean solution(String[] phone_book) {
 //	    	boolean answer = true;
@@ -60,23 +59,23 @@ public class ÀüÈ­¹øÈ£¸ñ·Ï {
 //	    }
 //	    
 //	}
-	
+
 	public static class Solution {
-    public boolean solution(String[] phone_book) {
-    	boolean answer = true;
-    	
-    	Arrays.sort(phone_book);
-    	
-    	 for (int i=0; i<phone_book.length-1; i++) {
-             if (phone_book[i+1].startsWith(phone_book[i])) {
-            	 answer = false;
-                 break;
-             }
-         }
-    	
-    	return answer;
-    }
-    
-}
+		public boolean solution(String[] phone_book) {
+			boolean answer = true;
+
+			Arrays.sort(phone_book);
+
+			for (int i=0; i<phone_book.length-1; i++) {
+				if (phone_book[i+1].startsWith(phone_book[i])) {
+					answer = false;
+					break;
+				}
+			}
+
+			return answer;
+		}
+
+	}
 
 }
