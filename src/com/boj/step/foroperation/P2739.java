@@ -11,6 +11,7 @@ public class P2739 {
         String str = bf.readLine();
         StringTokenizer stringTokenizer = new StringTokenizer(str);
         int a = Integer.parseInt(stringTokenizer.nextToken());
+
         if(!(a>=1&&a<=9)){
             throw new IllegalArgumentException("입력값은 1보다 크거나 같고, 9보다 작거나 같아야합니다."); }
         for (int i = 1; i <= 9; i++) {
