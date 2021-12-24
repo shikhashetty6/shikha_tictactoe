@@ -12,7 +12,6 @@ public class P2438 {
         int a = Integer.parseInt(stringTokenizer.nextToken());
         if(!(a>=1&&a<=100)){
             throw new IllegalArgumentException("입력값은 1보다 크거나 같고, 100보다 작거나 같아야 합니다."); }
-
         for(int i = 1; i <= a; i++){
             for(int k = 0; k < a-i; k++){
                 System.out.print(" "); }
