@@ -16,9 +16,7 @@ public class P1065 {
 
     public int check(int number) {
         int count = 99;
-        if (String.valueOf(number).length()<2) {
-            return number;
-        } else if (String.valueOf(number).length()<3) {
+        if (String.valueOf(number).length()<2 || String.valueOf(number).length()<3) {
             return number;
         } else if (String.valueOf(number).length() <= 4) {
             for (int i = 100; i <= number; i++) {
@@ -26,15 +24,8 @@ public class P1065 {
                     Integer a = Integer.valueOf(String.valueOf(i).substring(0, 1));
                     Integer b = Integer.valueOf(String.valueOf(i).substring(1, 2));
                     Integer c = Integer.valueOf(String.valueOf(i).substring(2, 3));
-                    if ((a == b-j)&&(b == c-j)) {
-                        count += 1;
-                    } else if ((a == b+j)&&(b == c+j)) {
-                        count += 1;
-                    }
-                }
-            }
-            return count;
-        }
-        return 0;
-        }
+                    if (((a == b-j)&&(b == c-j))||(a == b+j)&&(b == c+j)) {
+                        count += 1; } } }
+            return count; }
+        return 0; }
 }
