@@ -15,12 +15,9 @@ public class P2292 {
         while (true) {
             if (value >= input) {
                 System.out.println(count);
-                break;
-            } else {
+                break; }
+            else {
                 value = value + (count * 6);
-                count++;
-            }
-        }
-
+                count++; } }
     }
 }
