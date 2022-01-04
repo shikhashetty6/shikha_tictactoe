@@ -18,8 +18,7 @@ public class P1316 {
             Integer prev = 0;
             hashMap = new HashMap<>();
             for (int n = 0; n < 26; n++) {
-                hashMap.put(n+97, 0);
-            }
+                hashMap.put(n+97, 0);}
 
             for (int j = 0; j < str.length(); j++) {
                 Integer a = Integer.valueOf(str.substring(j, j + 1).charAt(0));
