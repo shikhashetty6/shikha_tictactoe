@@ -39,5 +39,4 @@ public class P1929 {
         }
         return primeList;
     }
-
 }
