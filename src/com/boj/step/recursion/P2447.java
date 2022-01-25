@@ -1,8 +1,6 @@
 package com.boj.step.recursion;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class P2447 {
     public char[][] array;
@@ -14,25 +12,55 @@ public class P2447 {
 
     private void solve() throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         Integer input = Integer.parseInt(bf.readLine());
 
         array = new char[input][input];
 
-        //printStar();
+        addStar(0, 0, input, false);
 
         for (int i = 0; i < input; i++) {
             for (int j = 0; j < input; j++) {
-                printStar(i, j, input);
+                bw.write(String.valueOf(array[i][j]));
             }
+            bw.newLine();
         }
+
+        bw.flush();
+        bw.close();
+        bf.close();
 
     }
 
-    public void printStar(int i, int j, int input) {
-        if (j % 3 == 0) {
+    public void addStar(int a, int b, int size, boolean blank) {
 
+        if (blank) {
+            for (int i = a; i < a + size; i++) {
+                for (int j = b; j < b + size; j++) {
+                    array[i][j] = ' ';
+                }
+            }
+            return;
         }
-        System.out.println("***");
+
+        if (size == 1) {
+            array[a][b] = '*';
+            return;
+        }
+
+        int changedSize = size/3;
+        int count =0;
+
+        for (int i = a; i < a + size; i += changedSize) {
+            for (int j = b; j < b + size; j += changedSize) {
+                count++;
+                if (count == 5) {
+                    addStar(i, j, changedSize ,true);
+                } else{
+                    addStar(i, j, changedSize ,false);
+                }
+            }
+        }
     }
 
 }
