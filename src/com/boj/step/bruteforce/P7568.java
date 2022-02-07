@@ -22,15 +22,12 @@ public class P7568 {
             weightList.add(weight);
             heightList.add(height);
         }
-
         for (int i = 0; i < weightList.size(); i++) {
             int rate = 1;
             for (int j = 0; j < weightList.size(); j++) {
                 if(i==j) continue;
                 if ((weightList.get(i) < weightList.get(j)) && (heightList.get(i) < heightList.get(j))) {
-                   rate++;
-                }
-            }
+                   rate++;}}
             System.out.print(rate + " ");
         }
     }

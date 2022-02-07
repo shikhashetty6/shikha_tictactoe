@@ -30,6 +30,5 @@ public class P11050 {
             return 1;
         }
         return i * factorial(i-1);
-
     }
 }

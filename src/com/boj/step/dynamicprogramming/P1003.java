@@ -35,5 +35,5 @@ public class P1003 {
         }
         return memoArray[n];
     }
-    }
+}
 
