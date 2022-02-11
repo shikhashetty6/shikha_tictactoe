@@ -38,7 +38,6 @@ public class P11051 {
         if (i<2) {
             return bigInteger1;
         }
-
         if (array[i] == null) {
             BigInteger bigInteger = new BigInteger(String.valueOf(i));
             array[i] = bigInteger.multiply(factorial(i - 1));

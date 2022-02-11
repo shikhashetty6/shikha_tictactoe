@@ -3,21 +3,21 @@ package com.boj.step.dynamicprogramming;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class P9184 {
+public class ReviewP9184 {
 
-    int [][][] array = new int[101][101][101];
+    private int[][][] array = new int[101][101][101];
 
     public static void main(String[] args) throws IOException {
-        P9184 p9184 = new P9184();
-        p9184.solve();
+        ReviewP9184 reviewP9184 = new ReviewP9184();
+        reviewP9184.solve();
     }
 
     private void solve() throws IOException {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         while (true) {
-            StringTokenizer stringTokenizer = new StringTokenizer(bf.readLine());
+            StringTokenizer stringTokenizer = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(stringTokenizer.nextToken());
             int b = Integer.parseInt(stringTokenizer.nextToken());
             int c = Integer.parseInt(stringTokenizer.nextToken());
@@ -26,10 +26,9 @@ public class P9184 {
             bw.write("w(" + a + ", " + b + ", " + c + ") = " + w(a, b, c));
             bw.newLine();
         }
-
         bw.flush();
         bw.close();
-        bf.close();
+        br.close();
     }
 
     public int w(int a, int b, int c) {
@@ -56,3 +55,4 @@ public class P9184 {
         }
     }
 }
+

@@ -41,14 +41,15 @@ public class P1932 {
 
     }
 
-    private int dp(int a, int b) {
-        if (a == inputCount-1) {
-            return dp[a][b];
+    private int dp(int depth, int index) {
+        if (depth == inputCount-1) {
+            return dp[depth][index];
         }
 
-        if (dp[a][b] == null) {
-            dp[a][b] = Math.max(dp(a+1,b),dp(a+1,b+1))+array[a][b];
+        if (dp[depth][index] == null) {
+            dp[depth][index] = Math.max(dp(depth+1,index),dp(depth+1,index+1))+array[depth][index];
         }
-        return dp[a][b];
+
+        return dp[depth][index];
     }
 }
