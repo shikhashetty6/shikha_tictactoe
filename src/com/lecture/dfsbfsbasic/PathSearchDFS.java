@@ -15,9 +15,7 @@ public class PathSearchDFS {
                 if (graph[v][i] == 1 && ch[i] == 0) {
                     ch[i]=1;
                     DFS(i);
-                    ch[i]=0;
-                }
-            }
+                    ch[i]=0;}}
         }
     }
 
@@ -36,6 +34,5 @@ public class PathSearchDFS {
         ch[1] = 1;
         pathSearchDFS.DFS(1);
         System.out.println(answer);
-
     }
 }

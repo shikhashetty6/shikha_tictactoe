@@ -11,11 +11,7 @@ public class RecursionFunction {
     public void recur(int value) {
 
         System.out.print(value + " ");
-
-        if (value == input) {
-            System.exit(1);
-        }
-
+        if (value == input) System.exit(1);
         recur(++value);
     }
     public static void main(String[] args) throws IOException {

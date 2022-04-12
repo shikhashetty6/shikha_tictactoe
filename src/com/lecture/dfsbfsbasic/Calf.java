@@ -40,7 +40,6 @@ public class Calf {
         int s = kb.nextInt();
         int e = kb.nextInt();
         System.out.println(calf.bfs(s, e));
-
     }
 
 

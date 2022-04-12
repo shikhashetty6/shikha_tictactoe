@@ -15,7 +15,7 @@ public class Fibonacci {
 
     public static void main(String[] args) throws IOException {
         Fibonacci fibonacci = new Fibonacci();
-        int n = 45;
+        int n = 5;
         fibo = new int[n+1];
         fibonacci.dfs(n);
         for (int i = 1; i <= n; i++) {

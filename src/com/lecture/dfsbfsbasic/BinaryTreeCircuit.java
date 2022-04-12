@@ -1,14 +1,5 @@
 package com.lecture.dfsbfsbasic;
 
-class Node{
-    int data;
-    Node lt, rt;
-    public Node(int val) {
-        data = val;
-        lt=rt=null;
-    }
-}
-
 public class BinaryTreeCircuit {
     Node root;
     public void dfs(Node root) {
