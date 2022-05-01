@@ -23,9 +23,9 @@ public class IslandNationSolution {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (board[i][j] == 1) {
-                    answer++;
                     board[i][j] = 0;
                     dfs(i, j, board);
+                    answer++;
                 }
             }
         }
