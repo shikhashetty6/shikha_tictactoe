@@ -8,16 +8,15 @@ public class FindDuplicatePermutation0502 {
 
     private void dfs(int L, int ch[]) {
         if (L == m) {
-            for (int i = 1; i <= n; i++) {
-                if(ch[i]==1) System.out.print((i+1)+" ");
+            for (int i = 0; i <= m-1; i++) {
+                if(ch[i]!=0) System.out.print((ch[i])+" ");
             }
             System.out.println();
         }
         else {
             for (int i = 1; i <= n; i++) {
-                ch[i] = 1;
+                ch[L] = i;
                 dfs(L+1, ch);
-                ch[i] = 0;
             }
         }
     }

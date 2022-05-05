@@ -14,7 +14,7 @@ public class PermutationSolution {
         }
         else{
             for (int i = 0; i < n; i++) {
-                if(ch[i]==0){
+                 if(ch[i]==0){
                     ch[i]=1;
                     pm[L] = arr[i];
                     dfs(L+1);
