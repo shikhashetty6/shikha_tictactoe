@@ -12,7 +12,7 @@ public class AWordInASentenceIndexOfSolution {
 
     private String solution(String str) {
         String answer = "";
-        int m = Integer.MIN_VALUE,pos;
+        int m = Integer.MIN_VALUE, pos;
         // i가 0번, t가 1번, 띄어쓰기가 2번
         // 띄어쓰기가 없으면 종료
         while ((pos=str.indexOf(' '))!=-1){
