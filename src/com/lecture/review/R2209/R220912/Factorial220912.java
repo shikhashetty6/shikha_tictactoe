@@ -1,4 +1,4 @@
-package com.lecture.review.R220912;
+package com.lecture.review.R2209.R220912;
 
 import java.util.Scanner;
 
