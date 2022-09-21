@@ -1,5 +1,8 @@
 package com.lecture.review.R2209.R220913;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTreeCircuit220914 {
 
     Node root;
@@ -18,12 +21,20 @@ public class BinaryTreeCircuit220914 {
 
     private void solution(Node root) {
         bfs(root);
-
     }
 
     private void bfs(Node root) {
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
 
-
+        while (queue != null) {
+            for (int i = 0; i < queue.size(); i++) {
+                Node poll = queue.poll();
+                System.out.print(poll.data + " ");
+                if(poll.lt!=null) queue.add(poll.lt);
+                if(poll.rt!=null) queue.add(poll.rt);
+            }
+        }
     }
 
     static class Node{
