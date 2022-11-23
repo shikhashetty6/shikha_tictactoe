@@ -16,17 +16,20 @@ public class ConferenceRoomR221123 {
             arrayList.add(new Conference(s,e));
         }
 
-        conferenceRoomR221123.solution(arrayList, n);
+        System.out.println(conferenceRoomR221123.solution(arrayList, n));
     }
 
-    private void solution(ArrayList<Conference> arrayList, int n) {
+    private int solution(ArrayList<Conference> arrayList, int n) {
+        int count = 0;
         Collections.sort(arrayList);
-        for (Conference conference : arrayList) {
-            System.out.println(conference.toString());
+        int et=0;
+        for(Conference ob : arrayList){
+            if(ob.s>=et){
+                count++;
+                et=ob.e;
+            }
         }
-        for(int i=0; i<n-1; i++){
-
-        }
+        return count;
     }
 }
 
