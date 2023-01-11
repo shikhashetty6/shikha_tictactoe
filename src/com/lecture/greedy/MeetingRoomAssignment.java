@@ -1,7 +1,6 @@
 package com.lecture.greedy;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -15,11 +14,8 @@ class Meeting implements Comparable<Meeting>{
 
     @Override
     public int compareTo(Meeting o) {
-//        if (this.s > o.s) {
-//            return this.s - o.s;
-//        } else if()
-//        return o.s+this.s;
-        return 1;
+        if (this.e == o.e) return this.s - o.s;
+        else return this.e - o.e;
     }
 }
 
@@ -33,17 +29,23 @@ public class MeetingRoomAssignment {
         Scanner kb = new Scanner(System.in);
         n = kb.nextInt();
         for (int i = 0; i < n; i++) {
-            int tempS = kb.nextInt();
-            int tempE = kb.nextInt();
-            arrayList.add(new Meeting(tempS, tempE));
+            int s = kb.nextInt();
+            int e = kb.nextInt();
+            arrayList.add(new Meeting(s, e));
         }
-        meetingRoomAssignment.solution();
+        System.out.println(meetingRoomAssignment.solution(arrayList));
     }
 
-    private void solution() {
+    private int solution(ArrayList<Meeting> arrayList) {
         Collections.sort(arrayList);
+        int et = 0;
+        int cnt = 0;
         for (Meeting meeting : arrayList) {
-            System.out.println("s: "+meeting.s +" e: "+ meeting.e);
+            if(meeting.s>=et){
+                et = meeting.e;
+                cnt++;
+            }
         }
+        return cnt;
     }
 }
